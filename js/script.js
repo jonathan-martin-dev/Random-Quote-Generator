@@ -12,51 +12,55 @@ project 1 - A Random Quote Generator
 ***/
 const quotes = [
   {
-    quoute: 'Execute Order 66.',
+    quote: 'Execute Order 66.',
     source: 'Darth Sidious (Senator Sheev Palpatine)',
     citation: 'Star Wars: Episode III - Revenge of The Sith',
     year: '19 BBY',
     tags: ['Sith', 'Clone Wars']
   },
   {
-    quoute: 'I don\'t know if you heard but the Empire is gone.',
+    quote: 'I don\'t know if you heard but the Empire is gone.',
     source: 'The Mandolorian',
     citation: 'Star Wars: The Mandalorian',
     year: '9 ABY',
     tags: ['Mandalore', 'Post-Empire']
   },
   {
-    quoute: 'Cal Kestis. How Predictable. Oh yes, I know your name...',
+    quote: 'Cal Kestis. How Predictable. Oh yes, I know your name...',
     source: 'Trilla Suduri (The Second Sister)',
     citation: 'Star Wars: Jedi Fallen Order',
     year: '14 BBY',
     tags: ['Inquisitor', 'Order 66', 'Empire']
   },
   {
-    quoute: 'The force is what gives a Jedi his power. It’s an energy field created by all living things. It surrounds us and penetrates us. It binds the Galaxy together.',
+    quote: 'The force is what gives a Jedi his power. It’s an energy field created by all living things. It surrounds us and penetrates us. It binds the Galaxy together.',
     source: 'Obi-Wan Kenobi',
     citation: 'Star Wars: Episode IV - A New Hope',
     year: '0 BBY/0 ABY',
     tags: ['Jedi', 'Force', 'Empire']
   },
   {
-    quoute: '[To Darth Vader] I thought I know who you were under that mask. But it\'s impossible. My master could never be so vile.',
+    quote: '[To Darth Vader] I thought I know who you were under that mask. But it\'s impossible. My master could never be so vile.',
     source: 'Ahsoka Tano',
     citation: 'Star Wars: Rebels',
     year: '4 BBY',
     tags: ['Jedi', 'Force', 'Pre-Empire']
   }
-]
+];
 
 
 /***
  * `getRandomQuote` function
 ***/
-
+function getRandomQuote() {
+  for (let i = 0; i < quotes.length; i++) {
+    console.log(quotes[i]);
+  }
+}
 
 
 /***
- * `printQuote` function
+//  * `printQuote` function
 ***/
 
 
@@ -66,4 +70,4 @@ const quotes = [
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-document.getElementById('load-quote').addEventListener("click", printQuote, false);
+// document.getElementById('load-quote').addEventListener("click", printQuote, false);
