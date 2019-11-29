@@ -10,7 +10,7 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
-const quotes = [
+var quotes = [
   {
     quote: 'Execute Order 66.',
     source: 'Darth Sidious (Senator Sheev Palpatine)',
@@ -49,19 +49,45 @@ const quotes = [
 ];
 
 
+
 /***
  * `getRandomQuote` function
 ***/
 function getRandomQuote() {
-  for (let i = 0; i < quotes.length; i++) {
-    console.log(quotes[i]);
-  }
+  // Get random numbers at the length of the array
+  var getRandomQuote = Math.floor(Math.random() * quotes.length);
+  return quotes[getRandomQuote];
 }
 
+getRandomQuote();
 
-/***
-//  * `printQuote` function
+
+
+/***  
+ * `printQuote` function
 ***/
+function printQuote() {
+  var quote = getRandomQuote();
+  var quoteGenerated = ''
+  
+  //Add string to variable
+  quoteGenerated += '<p class="quote">' + quote.quote + '</p>';
+  
+  if (quote.citation) {
+    //If the quote has a citation add it to the string
+    quoteGenerated += '<span class="citation">' + quote.citation + '</span>';
+  }
+  
+  if (quote.year) {
+    //If the quote has a year add it to the string
+    quoteGenerated += '<span class="year">' + quote.year + '</span>';
+  }
+  
+  quoteGenerated + '</p>';
+  
+  getElementById('')
+}
+
 
 
 
