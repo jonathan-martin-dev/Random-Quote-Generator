@@ -1,6 +1,6 @@
 # Random Quote Generator
  
-This project generates a random quote and random color from a static object. The quote changes every 20 seconds and if the "Show another quote button is pushed" it will change the quote immediately. 
+This project generates a random quote and random color from a static object. The quote changes every 20 seconds and if the "Show another quote button" is pushed it triggers an event to change the quote immediately. 
 
 <em>It was initially written in ES5 and updated to ES6.</em>
 
