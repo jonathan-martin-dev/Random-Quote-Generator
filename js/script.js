@@ -1,11 +1,4 @@
-/******************************************
-Treehouse FSJS Techdegree:
-project 1 - A Random Quote Generator
-******************************************/
-
-
-
-var quotes = [
+const quotes = [
   {
     quote: 'Execute Order 66.',
     source: 'Darth Sidious (Senator Sheev Palpatine)',
@@ -43,13 +36,12 @@ var quotes = [
   }
 ];
 
-
-
 // Function selects a random quote from array //
-function getRandomQuote() {
+const getRandomQuote = () => {
   // Get random numbers at the length of the array
-  var getRandomQuote = Math.floor(Math.random() * quotes.length);
-  return quotes[getRandomQuote];
+  const RandomQuote = Math.floor(Math.random() * quotes.length);
+  console.log(quotes[RandomQuote]);
+  return quotes[RandomQuote];
 }
 
 getRandomQuote();
@@ -57,7 +49,7 @@ getRandomQuote();
 
 
 // Change Background Color at Random
-function changeBackground() {
+const changeBackground = () => {
   var rgbColor1 = Math.floor(Math.random() * 256);
   var rgbColor2 = Math.floor(Math.random() * 256);
   var rgbColor3 = Math.floor(Math.random() * 256);
@@ -67,9 +59,9 @@ function changeBackground() {
 
 
 // Function prints quoute to the DOM
-function printQuote() {
-  var quote = getRandomQuote();
-  var quoteGenerated = ''
+const printQuote = () => {
+  const quote = getRandomQuote();
+  let quoteGenerated = ''
   
   //Add string to variable
   quoteGenerated += '<p class="quote">' + quote.quote + '</p><p class="source">' + quote.source;
@@ -99,8 +91,8 @@ function printQuote() {
 printQuote();
 
 // Change quote every 20 seconds
-setInterval(function() {
+setInterval(() => {
   printQuote();
 }, 20000);
 
-document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote').addEventListener("click", printQuote, 1);
